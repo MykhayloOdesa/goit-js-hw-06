@@ -29,8 +29,6 @@ const inputValue = document.querySelector("#validation-input");
 inputValue.addEventListener("blur", onInputBlur);
 
 function onInputBlur(event) {
-  console.log(event.currentTarget);
-  console.log(event.currentTarget.value.length);
   if (event.currentTarget.value.length >= event.currentTarget.dataset.length) {
     event.currentTarget.classList.remove("invalid");
     event.currentTarget.classList.add("valid");
