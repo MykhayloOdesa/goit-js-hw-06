@@ -8,9 +8,6 @@
 const inputValue = document.querySelector("input#name-input");
 const spanValue = document.querySelector("span#name-output");
 
-console.log(inputValue);
-console.log(spanValue);
-
 inputValue.addEventListener("input", onInputValue);
 
 function onInputValue(event) {
