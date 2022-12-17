@@ -32,17 +32,13 @@ function createBoxes(amount) {
 
   let divBox = document.createElement("div");
   divBox.style.padding = "50px";
-  let measures = 30;
 
   for (let i = 0; i < amount; i += 1) {
     const div = document.createElement("div");
-
-    div.style.width = measures + "px";
-    div.style.height = measures + "px";
+    div.style.width = `${30 + i * 10}px`;
+    div.style.height = `${30 + i * 10}px`;
     div.style.backgroundColor = getRandomHexColor();
     divBox.appendChild(div);
-
-    measures += 10;
   }
 
   boxesView.append(divBox);
