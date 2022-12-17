@@ -30,18 +30,18 @@ createBoxesButton.addEventListener("click", createBoxes);
 function createBoxes(amount) {
   amount = Number(controlsBox.firstElementChild.value);
 
-  let divBox = document.createElement("div");
-  divBox.style.padding = "50px";
+  const divBox = [];
 
   for (let i = 0; i < amount; i += 1) {
     const div = document.createElement("div");
     div.style.width = `${30 + i * 10}px`;
     div.style.height = `${30 + i * 10}px`;
     div.style.backgroundColor = getRandomHexColor();
-    divBox.appendChild(div);
+    divBox.push(div);
   }
 
-  boxesView.append(divBox);
+  boxesView.append(...divBox);
+  boxesView.style.padding = "50px";
 }
 
 destroyBoxesButton.addEventListener("click", destroyBoxes);
