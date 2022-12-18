@@ -20,15 +20,15 @@
 
 // Створи функцію destroyBoxes(), яка очищає вміст div#boxes, у такий спосіб видаляючи всі створені елементи.
 
-const controlsBox = document.querySelector("#controls");
+const controlsBoxInput = document.querySelector("#controls input");
 const boxesView = document.querySelector("#boxes");
 const createBoxesButton = document.querySelector("button[data-create]");
 const destroyBoxesButton = document.querySelector("button[data-destroy]");
 
 createBoxesButton.addEventListener("click", createBoxes);
 
-function createBoxes(amount) {
-  amount = Number(controlsBox.firstElementChild.value);
+function createBoxes() {
+  const amount = Number(controlsBoxInput.value);
 
   const divBox = [];
 
